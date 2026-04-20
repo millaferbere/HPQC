@@ -40,11 +40,11 @@ MPI_Rsend
 MPI_Isend
 
 ### Observations
-MPI_Send = is most stable
-MPI_Ssend = blocks execution
-MPI_Bsend = requires buffering
-MPI_Rsend = is unsafe without guarantees
-MPI_Isend = requires synchronization
+- MPI_Send = is most stable
+- MPI_Ssend = blocks execution
+- MPI_Bsend = requires buffering
+- MPI_Rsend = is unsafe without guarantees
+- MPI_Isend = requires synchronization
 ---
 
 ## Analysis
