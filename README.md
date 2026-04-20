@@ -41,10 +41,10 @@ tables, graphs and so on is strongly encouraged.
 ---
 
 ## Performance and Parallelism 
-This project will compare the performance of C and Python by timing different programs using both the Linux time command and internal timing methods. It will investigate how execution time changes for CPU-heavy tasks and file input/output, and how performance scales with increasing input sizes.
+This activity will compare the performance of C and Python by timing different programs using both the Linux time command and internal timing methods. It will investigate how execution time changes for CPU-heavy tasks and file input/output, and how performance scales with increasing input sizes.
 
 ## Introduction to MPI
-
+This activity introduces MPI. This is done by exploring how programs can run across multiple processes. It involves writing and running an MPI “ Hello World” program, comparing execution with different numbers of processes, and using timing tools to observe performance changes. It also includes analysing an existing MPI program, understanding how processes communicate, and developing a parallel version of a vector addition program to compare against a serial  implementation.
 
 
 ## MPI Communications
