@@ -60,9 +60,8 @@ This model has a few key improvements such as wave-like propagation in both dire
 
 The MPI implementation splits the string into sections across processes, each MPI process handles a portion of the string and computation is performed locally per process. Each process is ranked where rank 0 is responsible for the first section of the string and acts as the root process.
 
-Each process communicates with the processes next to it in order to exchange boundary values so that the wave can propagate correctly across process boundaries. This ensures that the interaction between adjacent sections of the string is maintained even when distributed across multiple processes.
+Each process communicates with the processes next to it in order to exchange boundary values so that the wave can propagate correctly across process boundaries. This ensures that the interaction between adjacent sections of the string is maintained even when distributed across multiple processes. At the end of each timestep, the results are gathered back to the root process so that the full string can be reconstructed and written to a single output file.
 
-At the end of each timestep, the results are gathered back to the root process so that the full string can be reconstructed and written to a single output file.
 ---
 
 
