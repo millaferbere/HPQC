@@ -1,4 +1,4 @@
-# Week 4: MPI Communications
+# HPQC MPI Communications
 
 ## Overview
 
