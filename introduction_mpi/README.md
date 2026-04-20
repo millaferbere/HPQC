@@ -1,4 +1,4 @@
-# Week 3: Introduction to MPI
+# HPQC Introduction to MPI
 
 
 ## MPI Hello World Benchmark
