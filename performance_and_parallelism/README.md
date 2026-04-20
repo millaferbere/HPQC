@@ -58,12 +58,15 @@ python3 file_write.py 10000
 ./bin/file_read
 python3 file_read.py
 
+---
 
 ## Results
 Task	       Input	C Time (s)	Python Time (s)
 Repeat Adder	1e6	0.009	0.072
 File Write	1e4	0.0015	0.0026
 File Read	-	0.0017	0.0006
+
+---
 
 ## Analysis
 Changing the repeat adder shows that C has significantly better results than Python for computational workloads due to compilation into machine code. Initial tests with small inputs produced results that wheren't as consitent. Increasing input sizes produced more reliable and meaningful results. Other results show smaller performance differences between C and Python, as both are limited by access speed rather than CPU performance. In some tests Python performed slightly better due to efficient file handling. From this the conclusion drawn is:
