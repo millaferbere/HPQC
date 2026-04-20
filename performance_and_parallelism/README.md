@@ -47,9 +47,6 @@ File Read	-	    0.0017	0.0006
 
 ## Analysis
 Changing the repeat adder shows that C has significantly better results than Python for computational workloads due to compilation into machine code. Initial tests with small inputs produced results that wheren't as consitent. Increasing input sizes produced more reliable and meaningful results. Other results show smaller performance differences between C and Python, as both are limited by access speed rather than CPU performance. In some tests Python performed slightly better due to efficient file handling. From this the conclusion drawn is:
-C is faster for CPU heavy tasks.
-Python is slower due to interpretation overhead.
-File read or write reduces performance differences between languages.
-Small benchmarks are unreliable, larger inputs are required for accurate results.
-System factors can affect timing results.
+C is faster for CPU heavy tasks and python is slower due to the fact it requires more computational resources and memory. File read or write reduces performance differences between languages.
+Small benchmarks are unreliable, larger inputs are required for accurate results, this shows that system factors can affect timing results.
 
