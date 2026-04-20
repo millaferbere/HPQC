@@ -10,7 +10,7 @@ mpicc hello_mpi.c -o bin/hello_mpi
 mpirun -np 1 bin/hello_mpi
 mpirun -np 2 bin/hello_mpi
 
-note: could onlu handle 2 maximum
+note: could only handle 2 maximum, this is true for all future tests
 
 ---
 
@@ -28,11 +28,12 @@ MPI allows programs to run across multiple processes simultaneously. Each proces
 
 ### Program Flow
 
-- MPI_Init() starts the MPI environment  
-- MPI_Comm_rank() gets rank  
-- MPI_Comm_size() gets total number of processes  
-- Each process runs code based on rank  
-- MPI_Finalize() ends MPI execution 
+- MPI_Init() = starts the MPI environment  
+- MPI_Comm_rank() = gets rank  
+- MPI_Comm_size() = gets total number of processes  
+- MPI_Finalize() = ends MPI execution
+
+Each process runs code based on rank  
 
 ### Process Roles
 
@@ -52,7 +53,7 @@ The goal of MPI vector addition is to benchmark a serial implementation of vecto
 
 The vector was made more significant using:
 
-vector[i] = i * 2 + 3;
+vector[i] = i * 2 + 3
 
 
 ## Compilation
