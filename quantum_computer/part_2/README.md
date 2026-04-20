@@ -15,7 +15,7 @@ grover.py = implements Grover’s search using the quantum simulator
 ## Requirements
 - Python 3  
 - NumPy
-- 
+  
 ## Running the Code
  python3 grover.py
 
