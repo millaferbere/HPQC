@@ -49,22 +49,29 @@ This produces a visually smooth motion. This is however not physically realistic
 
 ### Improved Model
 
-The improved model replaces the simple reapeting behaviour with a finite difference approximation of the wave equation. Where each interior point is updated using its current value as well as the values of the point>
-This mnshat the curve updates so if a point is higher than the point next to it, it will decrease and if a point is lower than the point next to it, it should increase.
+The improved model replaces the simple repeating behaviour with a finite difference approximation of the wave equation. Where each interior point is updated using its current value as well as the values of the points next to it.
 
-This model has a few key improvements such as the wave-like propagation in both directions and the more physically realistic oscillations which in turn improved stability and realism
+This means the curve updates so if a point is higher than the point next to it, it will decrease and if a point is lower than the point next to it, it should increase.
+
+This model has a few key improvements such as wave-like propagation in both directions and more physically realistic oscillations, which in turn improved stability and realism.
 
 ---
 ## MPI Strategy
 
-The MPI implementation splits the string into sections across processes, each MPI process handles a portion of the string and is performed locally per process. Each process is ranked where rank 0 is responsible for >
+The MPI implementation splits the string into sections across processes, each MPI process handles a portion of the string and computation is performed locally per process. Each process is ranked where rank 0 is responsible for the first section of the string and acts as the root process.
 
+Each process communicates with the processes next to it in order to exchange boundary values so that the wave can propagate correctly across process boundaries. This ensures that the interaction between adjacent sections of the string is maintained even when distributed across multiple processes.
+
+At the end of each timestep, the results are gathered back to the root process so that the full string can be reconstructed and written to a single output file.
 ---
 
 
 ## Analysis
-From this it can be seen that the serial version performs best for small input sizes while the MPI version introduces communication. The parallel speedup becomes noticeable for large numbers of points and the effici>
+From this it can be seen that the serial version performs best for small input sizes while the MPI version introduces communication overhead. This becomes noticeable for large numbers of points and the efficiency improves as the workload per process increases.
 
+For smaller problem sizes the communication cost outweighs the benefits of parallelisation, meaning the serial version performs better. As the number of points increases, the MPI becomes more efficient as the computational workload dominates over costs.
+
+This shows that the benefit of parallelisation depends strongly on the size of the problem, and that there is a threshold, the MPI version then becomes more viable and scalable than the serial version.
 ---
 
 ### Necessary  Python installs:
