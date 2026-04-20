@@ -1,4 +1,4 @@
-# Week 1: Performance and Parallelism
+# HPQC Performance and Parallelism
 
 ## Overview
 
