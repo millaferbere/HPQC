@@ -52,7 +52,7 @@ This activity explores MPI communication methods by implementing and testing poi
 
 
 ## Communications and Topologies 
-
+This activity explores how a oscillating string can be simulated in C and then extended into a parallel MPI version. It involves improving a serial wave model by removing hard-coded values, implementing a more realistic physical model, and parallelising the computation using MPI by dividing the string across processes and communicating boundary values. It also includes comparing serial and parallel performance to understand when parallelisation becomes beneficial depending on problem size.
 
 
 
