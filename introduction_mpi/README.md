@@ -10,7 +10,7 @@ mpicc hello_mpi.c -o bin/hello_mpi
 mpirun -np 1 bin/hello_mpi
 mpirun -np 2 bin/hello_mpi
 
-note: could only handle 2 maximum, this is true for all future tests
+note: the linux environment could only handle 2 processes maximum, this is true for all future tests
 
 ---
 
