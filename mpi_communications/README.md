@@ -23,21 +23,21 @@ Output order varies between executions while communication remains correct regar
 
 The original single-function program was split into:
 
-root_task()
-client_task()
-check_args()
-check_uni_size()
-check_task()
+- root_task()
+- client_task()
+- check_args()
+- check_uni_size()
+- check_task()
 
 This improved readability and overall flexibility of the function.
 
 ---
 ## Send Types Tested
-MPI_Send
-MPI_Ssend
-MPI_Bsend
-MPI_Rsend
-MPI_Isend
+- MPI_Send
+- MPI_Ssend
+- MPI_Bsend
+- MPI_Rsend
+- MPI_Isend
 
 ### Observations
 - MPI_Send = is most stable
@@ -69,25 +69,25 @@ Increasing number of pings improves stability and the latency converges for larg
 The program was extended to transmit arrays of varying sizes.
 
 ### Observations
-Small messages = latency dominated
-Large messages = bandwidth dominated
-The linear model can be used to estimate latency and bandwidth
+- Small messages = latency dominated
+- Large messages = bandwidth dominated
+- The linear model can be used to estimate latency and bandwidth
 ---
 
 ## Collective Communication
 
 The following MPI operations were tested:
 
-MPI_Bcast
-MPI_Scatter
-MPI_Gather
-MPI_Reduce
+- MPI_Bcast
+- MPI_Scatter
+- MPI_Gather
+- MPI_Reduce
 
 
 ### Observations
-MPI_Scatter = is efficient for distributed workloads
-MPI_Reduce =  is optimal for aggregation
-Manual communication is least efficient
+- MPI_Scatter = is efficient for distributed workloads
+- MPI_Reduce =  is optimal for aggregation
+- Manual communication is least efficient
 
 ---
 ## Conclusion
