@@ -1,8 +1,8 @@
-#Quantum Computer Simulator – Part 1
+# Quantum Computer Simulator – Part 1
 
 This implements a simple quantum computer simulator in Python, based on the ENCCS "Quantum Computing for Beginners" tutorial (Part 1).
 
-##Overview
+## Overview
 
 The simulator models a quantum computer using a state vector and supports basic quantum operations like:
 
@@ -13,18 +13,18 @@ measureQubit – measure and collapse a qubit
 
 The implementation uses NumPy for vector and matrix operations.
 
-##Files
+## Files
 simulator.py – main implementation of the simulator
 .gitignore – ignores Python cache files
 
-##Requirements
-Python 3
-NumPy
+## Requirements
+- Python 3
+- NumPy
 
-Running the Code
+## Running the Code
 python3 simulator.py
 
-##Example output:
+## Example output:
 
 Probabilities: [0.5 0.5]
 Measurement: 1
