@@ -4,15 +4,6 @@ These programs simulate the motion of a vibrating 1D string. The model uses C an
 
 The model shows the simulation of wave motion, serial computation in C, parallel computing using MPI and data visualisation using Python, using matplotlib.
 
----
-
-## File Structure
-communicators_and_topologies/
-│
-├── src/ # Source code (C and Python files)
-├── bin/
-├── data/ # CSV files
-└── README.md
 
 ---
 
@@ -24,19 +15,21 @@ Compile the serial program:
 
 gcc src/string_wave.c -o bin/string_wave -lm
 
-##MPI
+## MPI
 
 Compile the parallel version:
 
 mpicc src/string_wave_mpi.c -o bin/string_wave_mpi -lm
 
-##Running the program and the serial
+## Running the program and the serial
 ./bin/string_wave 50 5 25 data/output.csv
+
 Arguments:
-points → number of points on the string
-cycles → number of oscillation cycles
-samples → number of samples per cycle
-output_file → output CSV file path
+- points = number of points on the string
+- cycles = number of oscillation cycles
+- samples = number of samples per cycle
+- output_file = output CSV file path
+
 MPI execution
 mpirun -np 2 ./bin/string_wave_mpi 100 5 25 data/output.csv
 
@@ -48,8 +41,8 @@ To generate the gif with the showing the evolution of the vibrating string over 
 python3 src/animate_line_file.py data/output.csv result.gif
 
 ---
-##Model
-###Original Model
+## Model
+### Original Model
 
 The original model  uses a simple propagation rule, where each point copies the value of the previous, the first point is driven by a sine wave function and the motion propagates in one direction only.
 This produces a visually smooth motion. This is however not physically realistic, as it does not include restoring forces.
@@ -62,35 +55,35 @@ This mnshat the curve updates so if a point is higher than the point next to it,
 This model has a few key improvements such as the wave-like propagation in both directions and the more physically realistic oscillations which in turn improved stability and realism
 
 ---
-##MPI Strategy
+## MPI Strategy
 
 The MPI implementation splits the string into sections across processes, each MPI process handles a portion of the string and is performed locally per process. Each process is ranked where rank 0 is responsible for >
 
 ---
 
 
-##Analysis
+## Analysis
 From this it can be seen that the serial version performs best for small input sizes while the MPI version introduces communication. The parallel speedup becomes noticeable for large numbers of points and the effici>
 
 ---
 
-###Necessary  Python installs:
+### Necessary  Python installs:
 python3 -m pip install --user numpy matplotlib pandas
 
 
-##How to Run Full Workflow
+## How to Run Full Workflow
 
-###1. Compile
+### 1. Compile
 gcc src/string_wave.c -o bin/string_wave -lm
 mpicc src/string_wave_mpi.c -o bin/string_wave_mpi -lm
 
-###2. Run simulation
+### 2. Run simulation
 ./bin/string_wave 50 5 25 data/output.csv
 
-###3. Run  MPI
+### 3. Run  MPI
 mpirun -np 4 ./bin/string_wave_mpi 100 5 25 data/output.csv
 
-###4. Plot
+### 4. Plot
 python3 src/animate_line_file.py data/output.csv result.gif
 
 
