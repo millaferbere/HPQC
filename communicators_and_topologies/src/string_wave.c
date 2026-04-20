@@ -16,7 +16,6 @@ void print_header(FILE** p_out_file, int points);
 
 int main(int argc, char **argv)
 {
-        // ---------------- FIXED ARGUMENT HANDLING ----------------
         if (argc != 5)
         {
                 printf("Usage: %s [points] [cycles] [samples] [output_file]\n", argv[0]);
