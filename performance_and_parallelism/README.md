@@ -37,12 +37,11 @@ python3 file_write.py 10000
 python3 file_read.py
 
 ---
-```markdown id="p6kq8f"
 ## Results
 Task	       Input	C Time (s)	Python Time (s)
-Repeat Adder	1e6	0.009	0.072
-File Write	1e4	0.0015	0.0026
-File Read	-	0.0017	0.0006
+Repeat Adder	1e6	    0.009	0.072
+File Write	1e4	    0.0015	0.0026
+File Read	-	    0.0017	0.0006
 
 ---
 
