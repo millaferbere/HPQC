@@ -11,8 +11,8 @@ This program investigates MPI communication patterns, including point-to-point c
 The program comm_test_mpi.c was compiled and executed using different numbers of processes:
 
 
-mpicc comm_test_mpi.c -o bin/comm_test_mpi
-mpirun -np 4 bin/comm_test_mpi
+- mpicc comm_test_mpi.c -o bin/comm_test_mpi
+- mpirun -np 2 bin/comm_test_mpi
 
 
 ### Observations
