@@ -37,3 +37,31 @@ assess the performance of code in a variety of ways and environments. This inclu
 comparing various algorithms and languages on runtime, communications etc. Here,
 you’ll be assessed on the completeness, clarity and reproducibility of your results. Use of
 tables, graphs and so on is strongly encouraged.
+
+---
+
+## Performance and Parallelism 
+
+
+
+## Introduction to MPI
+
+
+
+## MPI Communications
+
+
+
+## Communications and Topologies 
+
+
+
+
+
+
+
+
+
+
+
+
