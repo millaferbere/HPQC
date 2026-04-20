@@ -24,14 +24,11 @@ Compile the serial program:
 
 gcc src/string_wave.c -o bin/string_wave -lm
 
-
-###MPI
+##MPI
 
 Compile the parallel version:
 
 mpicc src/string_wave_mpi.c -o bin/string_wave_mpi -lm
-
-
 
 ##Running the program and the serial
 ./bin/string_wave 50 5 25 data/output.csv
