@@ -13,15 +13,14 @@ This implementation shows the phase oracle construction, amplification, diffusio
 grover.py = implements Grover’s search using the quantum simulator
 
 ## Requirements
-Python 3  
-NumPy  
----
+- Python 3  
+- NumPy
+- 
 ## Running the Code
+ python3 grover.py
 
-
-python3 grover.py
 ---
-##Example Output
+## Example Output
 Result: 111101
 
 
