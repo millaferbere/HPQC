@@ -68,9 +68,10 @@ Each process communicates with the processes next to it in order to exchange bou
 ## Analysis
 From this it can be seen that the serial version performs best for small input sizes while the MPI version introduces communication overhead. This becomes noticeable for large numbers of points and the efficiency improves as the workload per process increases.
 
-For smaller problem sizes the communication cost outweighs the benefits of parallelisation, meaning the serial version performs better. As the number of points increases, the MPI becomes more efficient as the computational workload dominates over costs.
+For smaller problem sizes the communication cost outweighs the benefits of parallelisation, meaning the serial version performs better. As the number of points increases, the MPI becomes more efficient as the computational workload dominates over costs. 
 
 This shows that the benefit of parallelisation depends strongly on the size of the problem, and that there is a threshold, the MPI version then becomes more viable and scalable than the serial version.
+
 ---
 
 ### Necessary  Python installs:
