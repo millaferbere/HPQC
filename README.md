@@ -41,8 +41,7 @@ tables, graphs and so on is strongly encouraged.
 ---
 
 ## Performance and Parallelism 
-
-
+This project will compare the performance of C and Python by timing different programs using both the Linux time command and internal timing methods. It will investigate how execution time changes for CPU-heavy tasks and file input/output, and how performance scales with increasing input sizes.
 
 ## Introduction to MPI
 
