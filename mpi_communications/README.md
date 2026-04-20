@@ -6,7 +6,7 @@ This program investigates MPI communication patterns, including point-to-point c
 
 ---
 
-##MPI Communication Test
+## MPI Communication Test
 
 The program comm_test_mpi.c was compiled and executed using different numbers of processes:
 
@@ -14,13 +14,12 @@ The program comm_test_mpi.c was compiled and executed using different numbers of
 mpicc comm_test_mpi.c -o bin/comm_test_mpi
 mpirun -np 4 bin/comm_test_mpi
 
----
 
-##Observations
+### Observations
 Output order varies between executions while communication remains correct regardless of ordering and MPI execution is non-deterministic in scheduling
 
 ---
-##Refactoring
+## Refactoring
 
 The original single-function program was split into:
 
@@ -33,14 +32,14 @@ check_task()
 This improved readability and overall flexibility of the function.
 
 ---
-##Send Types Tested
+## Send Types Tested
 MPI_Send
 MPI_Ssend
 MPI_Bsend
 MPI_Rsend
 MPI_Isend
 
-##Observations
+### Observations
 MPI_Send = is most stable
 MPI_Ssend = blocks execution
 MPI_Bsend = requires buffering
@@ -48,35 +47,34 @@ MPI_Rsend = is unsafe without guarantees
 MPI_Isend = requires synchronization
 ---
 
-##Analysis
+## Analysis
 
 MPI communication timing was measured using MPI_Wtime.
 
-##Observation
+### Observation
 Communication time is extremely small with a high variance between runs this is because single measurements are unreliable.
 
 ---
 
-
-##Ping Pong Benchmark
+## Ping Pong Benchmark
 
 A two-process ping-pong program was used to measure latency.
 
-##Observations
+### Observations
 Increasing number of pings improves stability and the latency converges for large iteration counts
 
 ---
-##Bandwidth Test
+## Bandwidth Test
 
 The program was extended to transmit arrays of varying sizes.
 
-##Observations
+### Observations
 Small messages = latency dominated
 Large messages = bandwidth dominated
 The linear model can be used to estimate latency and bandwidth
 ---
 
-##Collective Communication
+## Collective Communication
 
 The following MPI operations were tested:
 
@@ -86,12 +84,12 @@ MPI_Gather
 MPI_Reduce
 
 
-##Observations
+### Observations
 MPI_Scatter = is efficient for distributed workloads
 MPI_Reduce =  is optimal for aggregation
 Manual communication is least efficient
 
-
-##Conclusion
+---
+## Conclusion
 
 MPI performance depends strongly on communication pattern, message size, and number of processes. Collective operations provide significant performance advantages over manual point-to-point communication in structured workloads.
