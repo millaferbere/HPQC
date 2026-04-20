@@ -37,7 +37,7 @@ python3 file_read.py
 
 ---
 ## Results
-For the Repeat Adder with an input of 1e6 the C time was 0.009 s and the python time was 0.072 s. For File Write with an input of 1e4 the C time of 0.0015 s and a python time of 0.0026 s. And for the File Read the C time was 0.0017 s and the python time is 0.0006 s.
+For the Repeat Adder with an input of 1000000 the C time was 0.009 s and the python time was 0.072 s. For File Write with an input of 10000 the C time of 0.0015 s and a python time of 0.0026 s. And for the File Read the C time was 0.0017 s and the python time is 0.0006 s.
 
 ---
 
