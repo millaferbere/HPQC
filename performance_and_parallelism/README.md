@@ -9,7 +9,6 @@ This tests the performance differences between **C and Python** using external t
 
 Organise all C programs using `gcc`:
 
-```bash
 gcc hello_world.c -o bin/hello_world
 gcc repeat_adder.c -o bin/repeat_adder
 gcc time_print.c -o bin/time_print
