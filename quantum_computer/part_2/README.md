@@ -1,6 +1,7 @@
 # Quantum Computer Simulator – Part 2 (Grover’s Search)
 
 This extends the Part 1 quantum simulator to implement Grover’s Search Algorithm, based on the ENCCS "Quantum Computing for Beginners" tutorial.
+
 ---
 ## Overview
 
