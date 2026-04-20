@@ -1,6 +1,6 @@
 # HPQC Communicators and Topologies
 
-These programs simulate the motion of a vibrating 1D string. The model uses C and includes both a serial and parallel MPI implementation. The output is displayed using a Python code .
+These programs simulate the motion of a oscillating 1D string. The model uses C and includes both a serial and parallel MPI implementation. The output is displayed using a Python code .
 
 The model shows the simulation of wave motion, serial computation in C, parallel computing using MPI and data visualisation using Python, using matplotlib.
 
@@ -36,7 +36,7 @@ mpirun -np 2 ./bin/string_wave_mpi 100 5 25 data/output.csv
 
 ##Visual display
 
-To generate the gif with the showing the evolution of the vibrating string over time from the output:
+To generate the gif with the showing the evolution of the oscillating string over time from the output:
 
 python3 src/animate_line_file.py data/output.csv result.gif
 
