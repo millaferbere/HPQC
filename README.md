@@ -48,7 +48,7 @@ This activity introduces MPI. This is done by exploring how programs can run acr
 
 
 ## MPI Communications
-
+This activity explores MPI communication methods by implementing and testing point-to-point and collective communication routines. It involves modifying and restructuring MPI programs to improv eclarity, experimenting with different send types, and measuring communication performance using internal timing functions. It also includes developing a ping-pong program to estimate latency and bandwidth, and comparing different collective communication strategies such as broadcast, scatter, gather, and reduce to understand their efficiency and behaviour.
 
 
 ## Communications and Topologies 
