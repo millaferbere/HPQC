@@ -6,10 +6,10 @@ This implements a simple quantum computer simulator in Python, based on the ENCC
 
 The simulator models a quantum computer using a state vector and supports basic quantum operations like:
 
-pushQubit – add a qubit to the system
-applyGate – apply quantum gates (matrix operations)
-tosQubit – reorder qubits
-measureQubit – measure and collapse a qubit
+- pushQubit – add a qubit to the system
+- applyGate – apply quantum gates (matrix operations)
+- tosQubit – reorder qubits
+- measureQubit – measure and collapse a qubit
 
 The implementation uses NumPy for vector and matrix operations.
 
