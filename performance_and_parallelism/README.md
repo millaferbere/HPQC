@@ -5,28 +5,6 @@
 This tests the performance differences between **C and Python** using external timing (Linux `time` command) and internal timing. This is to understand how execution time varies across different operations and programming languages.
 
 ---
-
-## Project Structure
-performance_and_parallelism/
-│
-├── hello_world.c
-├── hello_world.py
-├── repeat_adder.c
-├── repeat_adder.py
-├── time_print.c
-├── time_print.py
-├── triangular.c
-├── triangular.py
-├── file_write.c
-├── file_write.py
-├── file_read.c
-├── file_read.py
-├── bin/
-├── data/
-└── README.md
-
----
-
 ## Instructions
 
 Organise all C programs using `gcc`:
@@ -59,7 +37,7 @@ python3 file_write.py 10000
 python3 file_read.py
 
 ---
-
+```markdown id="p6kq8f"
 ## Results
 Task	       Input	C Time (s)	Python Time (s)
 Repeat Adder	1e6	0.009	0.072
